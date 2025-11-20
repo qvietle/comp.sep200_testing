@@ -31,3 +31,4 @@ jobs:
     - run: npm test
     - name: Coveralls
       uses: coverallsapp/github-action@v2
+      continues-on-error: true
