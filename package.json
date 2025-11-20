@@ -1,6 +1,10 @@
 {
-  "dependencies": {
+  "name": "comp.sep200_testing",
+  "devDependencies": {
     "chai": "^6.2.1",
     "mocha": "^11.7.5"
+  },
+  "scripts": {
+    "test": "mocha --timeout 20000"
   }
 }
