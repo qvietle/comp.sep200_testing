@@ -4,8 +4,7 @@ const add = require('../src/add').default;
 
 // For now some random incomplete
 describe('Testing Functions', () => {
-    console.log(add(1, 2))
-
+    console.log("THIS TEST", add('a', 2))
     it('add() should exist', () => {
         assert.exists(add(1, 2), 'add() Should Exists')
     });
@@ -38,5 +37,18 @@ describe('Testing Functions', () => {
 
     it('add() should return 0 if inputted over 2 params', () => {
         expect(add(1, 2, 3)).to.equal(0);
+    });
+
+    it('add() should return 0 or sum of 1 param + 0 if inputted under 2 params', () => {
+        expect(add(1)).to.equal(1);
+        expect(add()).to.equal(0);
+    });
+
+    it('add() should return a number if inputted a wrong params types', () => {
+        expect(add('a', 1)).to.be.a('number', 'expected the result of add() to be a number');
+        expect(add('a', 'b')).be.a('number', 'expected the result of add() to be a number');
+        expect(add([1, 2, 3], 1)).be.a('number', 'expected the result of add() to be a number');
+        expect(add({ 'a': b }, 1)).be.a('number', 'expected the result of add() to be a number');
+
     });
 })
