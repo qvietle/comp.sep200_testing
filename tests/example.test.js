@@ -7,5 +7,9 @@ describe('Hello World', () => {
         assert.strictEqual('hello world', 'hello world');
     })
 
+    it('must say Hello Universe', () => {
+        assert.strictEqual('hello universe', 'hello universe');
+    })
+
 
 })
