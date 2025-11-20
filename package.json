@@ -1,6 +1,13 @@
 {
-  "dependencies": {
+  "name": "comp.sep200_testing",
+  "directories": {
+    "tests": "tests"
+  },
+  "devDependencies": {
     "chai": "^6.2.1",
     "mocha": "^11.7.5"
+  },
+  "scripts": {
+    "test": "echo \"Testing All Tests\" && mocha --timeout 3000 \"tests/**/*.js\""
   }
 }
