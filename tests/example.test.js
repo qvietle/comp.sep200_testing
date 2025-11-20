@@ -1,5 +1,4 @@
-const chai = require('chai')
-const assert = require('chai').assert;
+import { assert } from 'chai';
 
 
 // For now some random incomplete
