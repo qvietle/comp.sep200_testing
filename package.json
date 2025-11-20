@@ -1,5 +1,6 @@
 {
   "name": "comp.sep200_testing",
+  "type": "module",
   "directories": {
     "tests": "tests"
   },
