@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { add } from '../src/example.js';
+import add from '../src/add.js';
 
 // For now some random incomplete
 describe('Hello World', () => {
