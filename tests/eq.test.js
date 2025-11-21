@@ -15,6 +15,7 @@ describe('Testing eq() Function', () => {
     it('eq() should return true for same values', () => {
         expect(eq(1, 1)).to.be.true
         expect(eq('a', 'a')).to.be.true
+        expect(eq(typeof 'a', typeof 'a')).to.be.true
         expect(eq(['a'], ['a']), "[] == [] expected to return true").to.be.true
         expect(eq([1, 2, 3], [1, 2, 3])).to.be.true
         expect(eq({ 'a': 1 }, { 'a': 1 })).to.be.true
