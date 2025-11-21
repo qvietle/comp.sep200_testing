@@ -28,6 +28,19 @@ describe('Testing Add Function', () => {
         expect(add(-5, 3)).to.equal(-2);
     });
 
+    it('add() should add 0 and any real number numbers', () => {
+        expect(add(0, 3)).to.equal(3);
+        expect(add(0, 3.2)).to.equal(3.2);
+        expect(add(0, -3.2)).to.equal(-3.2);
+
+    });
+
+    it('add() should add very large sums', () => {
+        expect(add(1000000, 2000000)).to.equal(3000000);
+        expect(add(-1000000, -2000000)).to.equal(-3000000);
+        expect(add(1000000, -2000000)).to.equal(-1000000);
+    });
+
     it('add() should return 0 if inputted over 2 params', () => {
         expect(add(1, 2, 3)).to.equal(0);
     });
