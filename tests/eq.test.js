@@ -1,0 +1,28 @@
+const assert = require('chai').assert;
+const { expect } = require('chai');
+const eq = require('../src/eq').default;
+
+// For now some random incomplete
+describe('Testing eq() Function', () => {
+    it('eq() should exist', () => {
+        assert.exists(eq, 'eq() Should Exists')
+    });
+
+    it('eq() should receive 2 arguments/parameters', () => {
+        expect(eq).to.have.a.lengthOf(2)
+    });
+
+    it('eq() should return true for same values', () => {
+        expect(eq(1, 1)).to.be.true
+        expect(eq('a', 'a')).to.be.true
+        expect(eq(['a'], ['a']), "[] == [] expected to return true").to.be.true
+        expect(eq([1, 2, 3], [1, 2, 3])).to.be.true
+        expect(eq({ 'a': 1 }, { 'a': 1 })).to.be.true
+    });
+
+    it('eq() should return a boolean even if given over/under 2 params/args', () => {
+        expect(eq(1, 2, 3)).to.be.a('boolean');
+        expect(eq(1)).to.be.a('boolean');
+    });
+
+})
