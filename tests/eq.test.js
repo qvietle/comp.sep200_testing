@@ -20,6 +20,15 @@ describe('Testing eq() Function', () => {
         expect(eq({ 'a': 1 }, { 'a': 1 })).to.be.true
     });
 
+    it('eq() should return false for different values', () => {
+        expect(eq(1, 2)).to.be.false
+        expect(eq(typeof 1, typeof 'a')).to.be.false
+        expect(eq('a', 'b')).to.be.false
+        expect(eq(['a'], ['b']), "[] == [] expected to return False").to.be.false
+        expect(eq([1, 2, 3], [1, 2, 4])).to.be.false
+        expect(eq({ 'a': 1 }, { 'b': 2 })).to.be.false
+    });
+
     it('eq() should return a boolean even if given over/under 2 params/args', () => {
         expect(eq(1, 2, 3)).to.be.a('boolean');
         expect(eq(1)).to.be.a('boolean');
