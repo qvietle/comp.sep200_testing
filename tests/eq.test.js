@@ -1,6 +1,5 @@
-const assert = require('chai').assert;
-const { expect } = require('chai');
-const eq = require('../src/eq').default;
+import { assert, expect } from 'chai';
+import eq from '../src/eq.js';
 
 // For now some random incomplete
 describe('Testing eq() Function', () => {

@@ -1,6 +1,5 @@
-const assert = require('chai').assert;
-const { expect } = require('chai');
-const filter = require('../src/filter').default;
+import { assert, expect } from 'chai';
+import filter from '../src/filter.js';
 
 // For now some random incomplete
 describe('Testing filter() Function', () => {

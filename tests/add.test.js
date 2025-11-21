@@ -1,6 +1,5 @@
-const assert = require('chai').assert;
-const { expect } = require('chai');
-const add = require('../src/add').default;
+import { assert, expect } from 'chai';
+import add from '../src/add.js';
 
 // For now some random incomplete
 describe('Testing Add Function', () => {
