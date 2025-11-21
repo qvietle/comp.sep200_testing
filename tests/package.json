@@ -1,0 +1,10 @@
+{
+    "name": "comp.sep200_testing",
+    "type": "commonjs",
+    "directories": {
+        "tests": "tests"
+    },
+    "scripts": {
+        "test": "echo \"Testing All Tests\" && mocha --timeout 3000 \"tests/**/*.js\""
+    }
+}
