@@ -41,7 +41,7 @@ describe('Testing Add Function', () => {
         expect(add(1000000, -2000000)).to.equal(-1000000);
     });
 
-    it('add() should return 0 if inputted over 2 params', () => {
+    it('add() should return sum of first 2 arguments if inputted over 2 params', () => {
         expect(add(1, 2, 3)).to.equal(0);
     });
 
