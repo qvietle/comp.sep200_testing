@@ -42,7 +42,7 @@ describe('Testing Add Function', () => {
     });
 
     it('add() should return sum of first 2 arguments if inputted over 2 params', () => {
-        expect(add(1, 2, 3)).to.equal(0);
+        expect(add(1, 2, 3)).to.equal(3);
     });
 
     it('add() should return 0 or sum of 1 param + 0 if inputted under 2 params', () => {
