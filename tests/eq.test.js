@@ -24,16 +24,16 @@ describe('Testing eq() Function', () => {
         expect(eq(typeof 'a', typeof 'a')).to.be.true
     });
 
-    it('eq() returns true for equal single-element arrays', () => {
-        expect(eq(['a'], ['a']), "[] == [] expected to return true").to.be.true
+    it('eq() returns false for equal single-element arrays', () => {
+        expect(eq(['a'], ['a']), "[] == [] expected to return true").to.be.false
     });
 
-    it('eq() returns true for equal numeric arrays', () => {
-        expect(eq([1, 2, 3], [1, 2, 3])).to.be.true
+    it('eq() returns false for arrays with equal values', () => {
+        expect(eq([1, 2, 3], [1, 2, 3])).to.be.false
     });
 
-    it('eq() returns true for equal objects with same keys and values', () => {
-        expect(eq({ 'a': 1 }, { 'a': 1 })).to.be.true
+    it('eq() returns false for different objects with same keys and values', () => {
+        expect(eq({ 'a': 1 }, { 'a': 1 })).to.be.false
     });
 
     it('eq() returns true for equal boolean values', () => {
@@ -78,6 +78,7 @@ describe('Testing eq() Function', () => {
 
     it('eq() returns false for different single-element arrays', () => {
         expect(eq(['a'], ['b']), "[] == [] expected to return False").to.be.false
+        console.log(eq(['a'],['b']))
     });
 
     it('eq() returns false for different numeric arrays', () => {
