@@ -46,6 +46,7 @@ describe('AI CREATED add TEST', () => {
 
     it('coerces numeric strings to numbers (if underlying implementation does)', () => {
         // If your implementation does NOT coerce, change this expectation accordingly.
-        expect(add('6', '4')).to.equal(10)
+        expect(add('6', '4')).to.equal('64')
+        // Implemention in src does NOT coerce, expectation is a concatenated string.
     })
 })
