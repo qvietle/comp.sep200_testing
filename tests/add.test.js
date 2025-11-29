@@ -58,6 +58,6 @@ describe('Testing Add Function', () => {
 
 
     it('add() should throw an error if all params wrong', () => {
-        expect(add('a', 'b')).be.a('number', 'expected the result of add() to be a number').and.to.equal(0);
+        expect(add('a', 'b')).to.throw("Error: Wrong type arguments");
     });
 })
