@@ -1,7 +1,6 @@
 import { assert, expect } from 'chai';
 import filter from '../src/filter.js';
 
-// For now some random incomplete
 describe('Testing filter() Function', () => {
     it('filter() should exist', () => {
         assert.exists(filter, 'filter() Should Exist')
@@ -24,15 +23,16 @@ describe('Testing filter() Function', () => {
 
     it('filter() should return array with no mutations', () => {
         expect(filter(arr1, (elem) => elem)).to.deep.equal(arr1);
-        expect(filter(arr2, (elem) => elem)).to.deep.equal(arr1);
-        expect(filter(arr3, (elem) => elem)).to.deep.equal(arr1);
-        expect(filter(dict1, (elem) => elem)).to.deep.equal(arr1);
+        expect(filter(arr2, (elem) => elem)).to.deep.equal(arr2);
+        expect(filter(arr3, (elem) => elem)).to.deep.equal(arr3);
+        expect(filter(dict1, (elem) => elem)).to.deep.equal(dict1);
     });
     it('filter() should return empty array when inputted an empty array', () => {
-        expect(filter([], (elem) => elem)).to.deep.equal([arr1]);
+        expect(filter([], (elem) => elem)).to.deep.equal([]);
     });
 
     it('filter() should point to the same references/objects are not cloned', () => {
+        const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         result = filter(arr1, (elem) => elem)
         expect(result[0]).to.equal(original[1])
     })
@@ -66,7 +66,8 @@ describe('Testing filter() Function', () => {
     });
 
     it('filter() should throw an error if not predicate is given', () => {
-        expect(filter(arr1, null)).to.throw(Function, 'This functions expects a predicate');
+        expect(() => filter(arr1, null)).to.throw(TypeError);
+        expect(() => filter(arr1, null)).to.throw('predicate is not a function');
     })
 
     it('filter() sparse arrays/holes', () => {
