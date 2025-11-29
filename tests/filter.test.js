@@ -32,9 +32,8 @@ describe('Testing filter() Function', () => {
     });
 
     it('filter() should point to the same references/objects are not cloned', () => {
-        const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        result = filter(arr1, (elem) => elem)
-        expect(result[0]).to.equal(original[1])
+        const result = filter(arr1, (elem) => elem)
+        expect(result[0]).to.equal(arr1[0])
     })
 
     it('filter() should return even numbers and truthy values for arr1', () => {
