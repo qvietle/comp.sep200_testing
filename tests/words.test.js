@@ -21,7 +21,7 @@ describe('Testing words Function', () => {
     });
 
     it('words() Empty String should return empty array', () => {
-        expect(words('')).to.deep.equal(['']);
+        expect(words('')).to.deep.equal([]);
     });
 
     it('words() string with numbers and letters', () => {
