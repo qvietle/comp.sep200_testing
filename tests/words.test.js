@@ -53,10 +53,10 @@ describe('Testing words Function', () => {
 
     // Input parameter number testing
     it('words() Should throw an error if too many arguments', () => {
-        expect(words('word1 word2 word3', /\S+/g, 'Extra ARG')).to.throw("Error: Too many arguments");
+        expect(() => words('word1 word2 word3', /\S+/g, 'Extra ARG')).to.throw("Error: Too many arguments");
     });
 
     it('words() Should throw an error if argument types are wrong', () => {
-        expect(words(1, [])).to.throw("Error: Argument Types are wrong. Expected String and String/Regex");
+        expect(() => words(1, [])).to.throw("Error: Argument Types are wrong. Expected String and String/Regex");
     });
 })

@@ -50,14 +50,14 @@ describe('Testing Add Function', () => {
         expect(add()).to.equal(0);
     });
 
-    it('add() should return a number if one param has a wrong type', () => {
-        expect(add('a', 1)).to.be.a('number', 'expected the result of add() to be a number').and.to.equal(1);
-        expect(add([1, 2, 3], 1)).be.a('number', 'expected the result of add() to be a number').and.to.equal(1);
-        expect(add({ 'a': b }, 1)).be.a('number', 'expected the result of add() to be a number').and.to.equal(1);
+    it('add() should throw an error if even one param has a wrong type', () => {
+        expect(() => add('a', 1)).to.throw("Error: Wrong type arguments");
+        expect(() => add([1, 2, 3], 1)).to.throw("Error: Wrong type arguments");
+        expect(() => add({ 'a': b }, 1)).to.throw("Error: Wrong type arguments");
     });
 
 
     it('add() should throw an error if all params wrong', () => {
-        expect(add('a', 'b')).to.throw("Error: Wrong type arguments");
+        expect(() => add('a', 'b')).to.throw("Error: Wrong type arguments");
     });
 })
