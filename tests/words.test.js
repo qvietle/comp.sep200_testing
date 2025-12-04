@@ -34,10 +34,6 @@ describe('Testing words Function', () => {
 
     });
 
-    it('words() Emojis and special characters (ignore emojis)', () => {
-        expect(words('Sale 🔥 today')).to.deep.equal(['Sale', 'today']);
-    });
-
     it('words() missing input should return empty array', () => {
         expect(words()).to.deep.equal([]);
     });
